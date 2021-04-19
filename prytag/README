@@ -1,0 +1,25 @@
+## README
+There are 3 prototype.
+
+# demo_centralised
+In this prototype all modules run on the same program.
+
+# demo_dist2
+This is the simplest distributed version of the prototype.
+The server [srv.c] contains all the logic of the following components:
+- Trusted Party
+- Aggregator
+- Collector
+The client [cli.c] contains implement the users.
+
+In this demo, there can only be one client per server.
+The client simulates N number of users (specified on the command line
+on the server side).
+
+# demo_dist4
+Four components:
+- tp.c (Trusted party)
+- aggregator.c 
+- collector.c
+- users.c
+

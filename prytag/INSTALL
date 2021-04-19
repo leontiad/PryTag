@@ -1,0 +1,20 @@
+== Installation C prototype ==
+
+Libraries dependencies:
+# GMP
+apt-get install libgmp-dev
+# openssl
+apt-get install libssl-dev
+# libpaillier-0.8
+wget http://acsc.cs.utexas.edu/libpaillier/libpaillier-0.8.tar.gz
+tar -xzvf libpaillier-0.8.tar.gz
+cd libpaillier-0.8
+./configure
+make
+make install
+
+# Generic complile command for CENTRALISED prototype
+gcc -o test test.c  -lpaillier -lgmp -lssl -lcrypto
+
+# Generic compilation command for DISTRIBUTED prototype
+gcc -o test test.c  prylib.c ionet.c -lpaillier -lgmp -lssl -lcrypto
